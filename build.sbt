@@ -3,15 +3,15 @@ val ProjectNamePrefix = "fs2-kafka-example"
 val ProjectVersion = "0.1.0"
 val ProjectScalaVersion = "2.13.1"
 
-lazy val  hedgehogVersion: String = "7bd29241fababd9a3e954fd38083ed280fc9e4e8"
+lazy val  hedgehogVersion: String = "0.5.0"
 
 lazy val  hedgehogRepo: Resolver =
   "bintray-scala-hedgehog" at "https://dl.bintray.com/hedgehogqa/scala-hedgehog"
 
 lazy val  hedgehogLibs: Seq[ModuleID] = Seq(
-  "qa.hedgehog" %% "hedgehog-core" % hedgehogVersion % Test
-  , "qa.hedgehog" %% "hedgehog-runner" % hedgehogVersion % Test
-  , "qa.hedgehog" %% "hedgehog-sbt" % hedgehogVersion % Test
+  "qa.hedgehog" %% "hedgehog-core" % hedgehogVersion % Test,
+  "qa.hedgehog" %% "hedgehog-runner" % hedgehogVersion % Test,
+  "qa.hedgehog" %% "hedgehog-sbt" % hedgehogVersion % Test,
 )
 
 lazy val cats: ModuleID = "org.typelevel" %% "cats-core" % "2.1.0"
@@ -21,7 +21,7 @@ lazy val pirateVersion = "44486bc961b52ba889f0b8f2b23f719d0ed8ba99"
 lazy val pirateUri = uri(s"https://github.com/Kevin-Lee/pirate.git#$pirateVersion")
 
 lazy val fs2Kafka = "com.github.fd4s" %% "fs2-kafka" % "1.0.0"
-lazy val vulcan = "com.github.fd4s" %% "vulcan" % "1.0.1"
+lazy val vulcan = "com.github.fd4s" %% "vulcan" % "1.1.0"
 
 ThisBuild / scalaVersion := ProjectScalaVersion
 ThisBuild / version := ProjectVersion
